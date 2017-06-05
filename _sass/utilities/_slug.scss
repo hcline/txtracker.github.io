@@ -1,0 +1,37 @@
+/* =============================================================================
+//  Cover module
+// -> a main heading for content
+// ========================================================================== */
+
+/*doc
+---
+title: Cover
+name: cover
+category: Molecules
+---
+
+*/
+
+@import "../config/all";
+
+/* Base
+// -------------------------------------------------------------------------- */
+
+.slug {
+    @extend .l-wrapper-outcrop;
+    @include scale-type('zeta');
+    @include border(bottom, 1px, 'border');
+    @include rem(padding-top, 32px);
+    @include rem(padding-bottom, 16px);
+    @include rem(margin-bottom, 24px);
+    padding-left: -$outcrop-margin;
+    padding-right: -$outcrop-margin;
+    text-transform: uppercase;
+}
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+
+
+/* Submodules
+// -------------------------------------------------------------------------- */

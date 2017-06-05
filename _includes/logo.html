@@ -1,0 +1,6 @@
+<picture class="{{ include.class }}">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source type="image/svg+xml" srcset="/assets/images/logos/logo-{{ include.name }}.svg">
+    <!--[if IE 9]></video><![endif]-->
+    <img src="/assets/images/logos/logo-{{ include.name }}.png" alt="{{ include.alt }}" title="{{ include.alt }}" />
+</picture>

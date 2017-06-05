@@ -1,0 +1,48 @@
+/* =============================================================================
+// Wrapper layout
+// ========================================================================== */
+
+@import "../config/layout_width";
+
+// basic layout wrapper, for constraining at large screen sizes
+.l-wrapper {
+  @include layout-base-w;
+  @include clearfix;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: gutter('wide');
+  padding-right: gutter('wide');
+}
+
+  // wide version of the layout wrapper
+  .l-wrapper--wide { @include layout-base-w("wide"); }
+
+  // a child element of a layout wrapper which is actually wider than its parent
+// -> it sticks out on either side
+  .l-wrapper-outcrop {
+      margin-left: $outcrop-margin;
+      margin-right: $outcrop-margin;
+    }
+
+  .l-wrapper-outcrop\@medium {
+      margin-left: 0;
+      margin-right: 0;
+
+      @include media(">medium") {
+        margin-left: $outcrop-margin;
+        margin-right: $outcrop-margin;
+      }
+    }
+
+
+  .l-wrapper-outcrop\@large {
+      margin-left: 0;
+      margin-right: 0;
+
+      @include media(">large") {
+        margin-left: $outcrop-margin;
+        margin-right: $outcrop-margin;
+      }
+    }

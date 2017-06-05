@@ -1,0 +1,16 @@
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+
+@import "libs"; // external/vendor libraries
+@import "paths"; // global settings
+@import "breakpoints"; // global breakpoints
+@import "animation"; // global animation/behaviors
+@import "scale"; // global modular scale
+@import "type"; // all @font-face things and base type scale
+@import "color"; // global/base color schemes
+@import "borders"; // global border styles
+@import "layout_width";
+@import "visibility";
+@import "spacing";
+@import "positioning";

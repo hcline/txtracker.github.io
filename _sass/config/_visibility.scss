@@ -1,0 +1,36 @@
+// =============================================================================
+// Visibility
+// -> hide and show things in various ways
+// =============================================================================
+
+// visually hide an element but keep its content accessible to screen readers, etc.
+@mixin visually_hidden($focusable: false) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+
+  // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard:
+  // https://www.drupal.org/node/897638
+  @if ($focusable == true) {
+    &:active,
+    &:focus {
+      clip-path: auto;
+      height: auto;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+// restore a hidden element
+@mixin restore-visually_hidden($overflow: visible) {
+  clip-path: auto;
+  height: auto;
+  overflow: $overflow;
+  position: relative;
+  width: auto;
+}

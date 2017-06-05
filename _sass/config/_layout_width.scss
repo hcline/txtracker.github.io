@@ -1,0 +1,40 @@
+// =============================================================================
+// Wrapper layout classes
+// =============================================================================
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+
+@import "spacing";
+
+$outcrop-margin: -2em;
+
+// width of main layout
+$layout-widths: (
+  'default' : 600px,
+  'wide'    : 1024px,
+);
+
+// Getter function for layout widths
+// -> PUBLIC
+@function layout-w($w: 'default') {
+  @return map-get($layout-widths, $w);
+}
+
+// Set a base width with gutter
+// -> PUBLIC
+@mixin layout-base-w($w: "default") {
+  max-width: add_outside_gutters(layout-w($w));
+}

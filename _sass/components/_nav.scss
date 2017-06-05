@@ -1,0 +1,90 @@
+/* =============================================================================
+//  l-Bookend layout utility
+//  -> a narrow, horizontal 'strip' appearing at the top and bottom of a page
+//  -> used as a common layout foundation for the main header and footer
+// ========================================================================== */
+
+/*doc
+---
+title: l-Bookend
+name: l-bookend
+category: Layout
+---
+
+*/
+
+@import "../config/all";
+
+/* Base
+// -------------------------------------------------------------------------- */
+
+.main-nav {
+    display: block;
+}
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+
+@include breakpointify('.main-nav--horizontal', true, 'xsmall' 'small') {
+    .nav-item--fixed {
+        position: fixed;
+    }
+    .nav-item--center {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .nav-item--left {
+        display: inline-block;
+        float: left;
+    }
+
+    .nav-item--right {
+        display: inline-block;
+        float: right;
+    }
+}
+
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+
+a.nav-item {
+    @extend .font-display;
+    @include color('text' 'primary');
+    @include scale-type('zeta');
+    @include rem(padding-top, 50px);
+    @include rem(padding-right, 16px);
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: middle;
+
+    &:hover {
+        @include color('highlight');
+    }
+}
+
+.menu-trigger {
+    @extend a.nav-item;
+    display: none;
+
+    span, span:before, span:after {
+        @include color('text' 'primary', 'background-color');
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 16px;
+    }
+    span {
+        @include rem(top, 58px);
+        @include rem(right, -8px);
+        position: absolute;
+    }
+    span:before {
+        margin-top: -4px;
+    }
+    span:after{
+        margin-top: 6px;
+    }
+
+}

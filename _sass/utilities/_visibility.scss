@@ -1,0 +1,15 @@
+/* =============================================================================
+// Visibility utilities
+// ========================================================================== */
+
+@import "../config/visibility";
+
+// hide but keep it accessible
+.is-visually_hidden {
+    @include visually_hidden;
+
+    &.focusable { @include visually_hidden(true); }
+}
+
+// completely hide
+.is-hidden { display: none !important; }

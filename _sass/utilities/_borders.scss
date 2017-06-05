@@ -1,0 +1,27 @@
+/* =============================================================================
+// Border utilities
+// ========================================================================== */
+
+@import "../config/borders";
+
+// .border, .border@[screen]
+.border { @include border; }
+
+@each $side in "top", "right", "bottom", "left" {
+
+  // .border-[side], .border-[side]@[screen]
+  .border-#{$side} { @include border($side); }
+
+  // .no-border-[side], .no-border-[side]@[screen]
+  .no-border-#{$side} { border-#{$side}: none !important; }
+}
+
+// .no-border, .no-border@[screen]
+.no-border { border: none !important; }
+
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+
+// make a border thicker
+.border--thick { border-width: border-w('thick'); }

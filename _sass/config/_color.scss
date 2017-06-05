@@ -1,0 +1,140 @@
+// =============================================================================
+//  Global color styles
+// -> base colors are set here on global elements, but modules apply their own
+// -> refer to colors ONLY via the $theme maps
+// =============================================================================
+
+@import "libs";
+
+// Base Palette
+// -----------------------------------------------------------------------------
+// -> PRIVATE, do not use outside this settings file
+
+// neutrals
+$black      : #000;
+$gray       : #9B9B9B;
+$light-gray : #DEDEE5;
+
+// Themes
+// -----------------------------------------------------------------------------
+// -> PUBLIC, use these for color references
+
+// note: highlight is default; variations are assigned in local styles
+$themes: (
+  'default': (
+    'text': (
+      'primary'   : $black,
+      'secondary' : #22D9B9,
+      'tertiary'  : #FF0074
+    ),
+    'bg'          : #fff,
+    'well'        : #f1f1f2,
+    'border'      : #DEDEE5,
+    'highlight'   : #22D9B9
+  ),
+  'reverse': (
+    'text': (
+      'primary'   : #0B7F6D,
+      'secondary' : #000000,
+      'tertiary'  : #FFFFFF
+    ),
+    'bg'          : #0FAD95,
+    'well'        : #22D9B9,
+    'border'      : #22D9B9,
+    'highlight'   : #0B7F6D
+  ),
+  'negative': (
+    'text': (
+      'primary'   : #22D9B9,
+      'secondary' : #FFFFFF,
+      'tertiary'  : #FF0074
+    ),
+    'bg'          : #000000,
+    'well'        : #0B7F6D,
+    'border'      : #22D9B9,
+    'highlight'   : #FF0074
+  )
+);
+
+// getter function to access theme map values
+// -> USAGE:
+//      color: theme('text' 'primary');
+//      color: theme('highlight', 'reverse');
+@function theme($colors, $name: 'default') {
+    // first extract the 'theme' nested map
+    $theme: map-get($themes, $name);
+
+    // now get the nested map for the first color value
+    $color: map-get($theme, nth($colors, 1));
+
+    // if there's more than one color string in the $colors list, dig deeper
+    @if length($colors) > 1 {
+        @for $i from 2 through length($colors) {
+            // keep updating $color with the next nested map until we've reached the end of the list
+            $color: map-get($color, nth($colors, $i));
+        }
+    }
+    @return $color;
+}
+
+// theme mixin
+// -> set a standard color scheme on a given element/container
+@mixin theme($theme) {
+  color: theme('text' 'primary', $theme);
+  background-color: theme('bg', $theme);
+  border-color: theme('border', $theme) !important;
+
+  // highlight color when you select something
+  ::selection {
+    background: theme('highlight', $theme);
+    color: #fff;
+    text-shadow: none;
+  }
+
+  // ditto, for mozilla engine
+  ::-moz-selection {
+    background: theme('highlight', $theme);
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+// add colors for each theme
+// -> USAGE:
+//      @include color('text' 'primary', 'background-color');
+@mixin color($color, $attr: color, $important: false) {
+  // set color for default theme
+  #{$attr}: theme($color)#{if($important != false, " !important", "")};
+
+  // set the color of this element to match the theme of this context
+  @each $theme, $colors in $themes {
+    // @debug($theme);
+    @if $theme != "default" {
+      // set color to theme of either this element or its parent
+      &.c-theme-#{$theme}, .c-theme-#{$theme} & {
+        #{$attr}: theme($color, $theme)#{if($important != false, " !important", "")};
+      }
+    }
+  }
+}
+// better lighten/darken functions
+// -> https://gist.github.com/triple-j/065cc9002ae4f8645457
+@function tint($color, $percent) {
+    @return mix(white, $color, $percent * 1%);
+}
+
+@function shade($color, $percent) {
+    @return mix(black, $color, $percent * 1%);
+}
+
+// darken or lighten a given color
+// -> used by color mixin below
+@function modify_color($hex, $lighten: 0, $darken: 0) {
+    @if $lighten > 0 & $hex != #fff {
+        @return tint($hex, $lighten);
+    } @elseif $darken > 0 {
+        @return shade($hex, $darken);
+    } @else {
+        @return $hex;
+    }
+}

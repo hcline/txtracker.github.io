@@ -1,0 +1,49 @@
+/* =============================================================================
+//  Cover module
+// -> a main heading for content
+// ========================================================================== */
+
+/*doc
+---
+title: Cover
+name: cover
+category: Molecules
+---
+
+*/
+
+@import "../config/all";
+
+/* Base
+// -------------------------------------------------------------------------- */
+
+.cover {
+    display: block;
+    position: relative;
+    min-height: 100px;
+    min-height: 30vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // @include yep(flexbox) {
+    //     @include display(flex);
+    //     @include align-items(center);
+    // }
+}
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+
+.cover-header {
+    @include rem(padding-top, 80px);
+    @include rem(padding-bottom, scale-type('cappa'));
+    min-height: 140px;
+    min-height: 15vh;
+    position: relative; 
+}
+
+/* Submodules
+// -------------------------------------------------------------------------- */
+
+.cover-content { z-index: z("middle") }

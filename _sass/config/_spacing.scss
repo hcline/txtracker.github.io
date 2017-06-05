@@ -1,0 +1,57 @@
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+
+@import "../config/libs";
+
+// standard spacing for margins and padding, etc.
+$gutters: (
+  'narrow'  : scale-type('eta'),
+  'default' : scale-type('epsilon'),
+  'wide'    : scale-type('beta'),
+  'xwide'   : scale-type('alpha')
+);
+
+// getter function for $gutters map
+@function gutter($name: 'default') {
+  @return map-get($gutters, $name);
+}
+
+// add gutters (on either side) to a given container width
+@function add_outside_gutters($w, $gutter: 'wide') {
+  @return ($w + gutter($gutter)); // we only want 1/2 of the gutter on either side, so don't multiply by 2
+}
+
+// figure out a split gutter for a wrapper at a given size
+// -> the standard gutter (gutter()) just gets divided in half
+// -> wider/narrower gutters are ADDED to a neighboring standard gutter
+@function calculate_split_gutter($size: 'default') {
+  @return abs(gutter($size) - (gutter()/2));
+}
+
+// set up split-gutter padding on the given sides
+@mixin gutters($size: 'default', $sides: 'all') {
+  $gutter: calculate_split_gutter($size);
+
+  @if ($sides == 'all') {
+    @include rem(padding, $gutter);
+  } @else {
+    @each $side in $sides {
+      @include rem(padding-#{$side}, $gutter);
+    }
+  }
+
+  // set up negative margins for a 'full bleed' child
+  > .l-gutter--full_bleed {
+     @if ($sides == 'all') {
+       @include rem(margin, -($gutter));
+       @include rem(padding, ($gutter * 2));
+     } @else {
+       @each $side in $sides {
+         @include rem(margin-#{$side}, -($gutter));
+         @include rem(padding-#{$side}, ($gutter * 2));
+       }
+     }
+   }
+}

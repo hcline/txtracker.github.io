@@ -1,0 +1,45 @@
+/* =============================================================================
+// Wrapper layout
+// ========================================================================== */
+
+@import "../config/all";
+
+/* Base
+// -------------------------------------------------------------------------- */
+
+footer, .footer {
+    @include border(top, 3px, 'border');
+}
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+
+@include breakpointify('.footer--nav--horizontal', true, 'xsmall' 'small') {
+    .footer--nav-item--center {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .footer--nav-item--left {
+        display: inline-block;
+        float: left;
+    }
+
+    .footer--nav-item--right {
+        display: inline-block;
+        float: right;
+    }
+    .footer--text {
+        @include rem(margin-top, 12px);
+    }
+}
+
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+
+.footer--nav-item {
+    @include clearfix;
+    display: block;
+    position: relative;
+    vertical-align: middle;
+}

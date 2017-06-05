@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-tx/symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-tx/symbol">
+            <polygon id="Path" fill="#22D9B9" points="-1 80 80.3315217 80 80.3315217 0 -1 0"></polygon>
+            <path d="M48.9486957,71.4933333 L46.8808696,71.4933333 L46.8808696,49.6266667 L39.1086957,49.6266667 L39.1086957,47.7777778 L56.7208696,47.7777778 L56.7208696,49.6266667 L48.9486957,49.6266667 L48.9486957,71.4933333 Z M69.4308696,71.4933333 L67.2204348,71.4933333 L61.516087,63.92 L55.776087,71.4933333 L53.5656522,71.4933333 L60.3752174,62.6755556 L53.9578261,54.32 L56.1682609,54.32 L61.516087,61.3955556 L66.8282609,54.32 L69.0386957,54.32 L62.6213043,62.6755556 L69.4308696,71.4933333 Z" id="tx" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+// =============================================================================
+// Frameworks & vendor stuff
+// -> all dependencies should be imported here, then imported
+//    as-needed in sass files
+// =============================================================================
+
+// --- NPM libs ----------------------------------------------------------------
+// -> in /node_modules via $ npm install
+// -> add '~' before import paths for webpack
+
+@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "../../node_modules/modularscale-sass/stylesheets/modular-scale";
+@import "../../node_modules/include-media/dist/include-media";
+@import "../../node_modules/modernizr-mixin/stylesheets/modernizr";
+@import "../../node_modules/sassy-lists/stylesheets/SassyLists";
+
+// --- vendor libs -------------------------------------------------------------
+
+// -> in assets/stylesheets/vendor
+// misc vendor libs (in vendor folder)
+@import "../vendor/sass-units";
+@import "../vendor/sass-list-helpers";
+@import "../vendor/sass-type-helpers";

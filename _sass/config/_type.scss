@@ -1,0 +1,47 @@
+// =============================================================================
+//  Type config & scale
+// =============================================================================
+
+@import "libs";
+@import "paths";
+
+// default type sizes
+$type-size-default: 16px !default;
+$type-size-amp: 1.1em !default; // size of ampersands relative to their context
+$type-line_height: 1.5 !default;
+
+// set type to default body size using REMs
+// -> useful for resetting type size on a container to override parents
+@mixin type-size-default {
+  @include rem(font-size, $type-size-default);
+}
+
+// Fonts
+// -----------------------------------------------------------------------------
+// -> font-face mixins use Bourbon
+
+/* ----- Aspira ------------------------------------------------------------ */
+// -> display font
+
+@include font-face("aspira-normal", "#{$asset-path-fonts}/Aspira-Thin-webfont", $file-formats: eot ttf woff svg);
+@include font-face("aspira-bold", "#{$asset-path-fonts}/Aspira-Demi-webfont", bold, $file-formats: eot ttf woff svg);
+
+
+/* Font mixins
+// -------------------------------------------------------------------------- */
+// -> PUBLIC, use these to style type globally & in modules
+
+/* ----- Display type ------------------------------------------------------- */
+
+@mixin font-display($weight: 'normal', $style: 'normal') {
+    font-family: "aspira-#{$weight}", $helvetica;
+    font-weight: $weight;
+}
+
+/* ----- Body type ---------------------------------------------------------- */
+
+@mixin font-body($weight: 'normal', $style: 'normal') {
+    font-family: "aspira-#{$weight}", $helvetica;
+    font-weight: $weight;           
+    font-style: $style;
+}

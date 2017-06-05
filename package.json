@@ -1,0 +1,29 @@
+{
+  "name": "bivee-css-boilerplate",
+  "version": "0.4.0",
+  "description": "The basic boilerplate we use on most projects to organize our CSS. This covers the basic folder structure, variable layout, and setup work.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biveeco/css-framework.git"
+  },
+  "author": "Bivee, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/biveeco/css-framework/issues"
+  },
+  "homepage": "https://github.com/biveeco/css-framework#readme",
+  "dependencies": {
+    "SassyLists": "git+https://github.com/at-import/SassyLists.git",
+    "bourbon": "^4.2.7",
+    "include-media": "^1.4.4",
+    "modularscale-sass": "^2.1.1",
+    "modernizr": "^3.2.0",
+    "modernizr-mixin": "^3.0.7",
+    "modularscale-sass": "^2.1.1",
+    "normalize.css": "^5.0.0"
+  }
+}

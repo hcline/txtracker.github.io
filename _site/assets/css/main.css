@@ -1,0 +1,3248 @@
+@charset "UTF-8";
+/*
+
+ */
+@import url(vendor/normalize.css);
+/* /////////////////////////////////////////////////////////////////////////////
+// Base styles
+// -> global element styles: lists, text, images, etc.
+///////////////////////////////////////////////////////////////////////////// */
+/* =============================================================================
+// Global box model and scaling
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+html {
+  font-size: 95%;
+  box-sizing: border-box;
+  margin: 0; }
+  @media (min-width: 42.01em) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 62.01em) {
+    html {
+      font-size: 110%; } }
+  @media (min-width: 75.01em) {
+    html {
+      font-size: 120%; } }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* ==========================================================================
+//  Global media styles
+// ========================================================================== */
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+  max-width: 100%; }
+
+/* Globals
+// -------------------------------------------------------------------------- */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+  max-width: 100%; }
+
+figure {
+  margin: 0; }
+
+/* Fix IE SVG scaling issue
+ * https://gist.github.com/larrybotha/7881691
+ */
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src*=".svg"] {
+  width: 100%; }
+
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"],
+  source[type*="svg+xml"] {
+    width: 100%; } }
+/* Utilities
+// -------------------------------------------------------------------------- */
+/* https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  padding-top: 25px;
+  height: 0; }
+  .video-wrapper > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.media-aspect-1-2 {
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .media-aspect-1-2::before, .media-aspect-1-2:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 61.8034%; }
+  .media-aspect-1-2 .media-aspect-content, .media-aspect-1-2 source, .media-aspect-1-2 img {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .media-aspect-1-2 .media-aspect-content.c-theme-reverse, .c-theme-reverse .media-aspect-1-2 .media-aspect-content, .media-aspect-1-2 source.c-theme-reverse, .c-theme-reverse .media-aspect-1-2 source, .media-aspect-1-2 img.c-theme-reverse, .c-theme-reverse .media-aspect-1-2 img {
+      background-color: #0FAD95; }
+    .media-aspect-1-2 .media-aspect-content.c-theme-negative, .c-theme-negative .media-aspect-1-2 .media-aspect-content, .media-aspect-1-2 source.c-theme-negative, .c-theme-negative .media-aspect-1-2 source, .media-aspect-1-2 img.c-theme-negative, .c-theme-negative .media-aspect-1-2 img {
+      background-color: #000000; }
+
+.media-aspect-content.media-aspect-content--contain {
+  background-size: contain; }
+
+/* =============================================================================
+//  Global type styles
+// ========================================================================== */
+/*doc
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Globals
+// -------------------------------------------------------------------------- */
+body {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-style: "normal";
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6,
+.t-heading {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  line-height: 1.2;
+  margin: 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+  .t-heading a {
+    color: inherit; }
+  h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+  .t-heading strong {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold; }
+
+p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #000; }
+  p.c-theme-reverse, .c-theme-reverse p {
+    color: #0B7F6D; }
+  p.c-theme-negative, .c-theme-negative p {
+    color: #22D9B9; }
+
+a {
+  color: #22D9B9;
+  text-decoration: none; }
+  a.c-theme-reverse, .c-theme-reverse a {
+    color: #0B7F6D; }
+  a.c-theme-negative, .c-theme-negative a {
+    color: #FF0074; }
+
+strong,
+.t-strong {
+  font-family: "aspira-bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "bold";
+  font-style: "normal"; }
+
+em,
+.t-em {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-style: "italic"; }
+
+small,
+.t-small {
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #000; }
+  small.c-theme-reverse, .c-theme-reverse small,
+  .t-small.c-theme-reverse, .c-theme-reverse
+  .t-small {
+    color: #0B7F6D; }
+  small.c-theme-negative, .c-theme-negative small,
+  .t-small.c-theme-negative, .c-theme-negative
+  .t-small {
+    color: #22D9B9; }
+
+figcaption,
+.t-caption {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #22D9B9; }
+  figcaption.c-theme-reverse, .c-theme-reverse figcaption,
+  .t-caption.c-theme-reverse, .c-theme-reverse
+  .t-caption {
+    color: #000000; }
+  figcaption.c-theme-negative, .c-theme-negative figcaption,
+  .t-caption.c-theme-negative, .c-theme-negative
+  .t-caption {
+    color: #FFFFFF; }
+
+address,
+.t-address {
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #22D9B9; }
+  address.c-theme-reverse, .c-theme-reverse address,
+  .t-address.c-theme-reverse, .c-theme-reverse
+  .t-address {
+    color: #000000; }
+  address.c-theme-negative, .c-theme-negative address,
+  .t-address.c-theme-negative, .c-theme-negative
+  .t-address {
+    color: #FFFFFF; }
+
+/* Utilities
+// -------------------------------------------------------------------------- */
+.t-scale-alpha {
+  font-size: 60px;
+  font-size: 3.75rem; }
+
+.t-scale-beta {
+  font-size: 37px;
+  font-size: 2.3125rem; }
+
+.t-scale-cappa {
+  font-size: 26px;
+  font-size: 1.625rem; }
+
+.t-scale-delta {
+  font-size: 23px;
+  font-size: 1.4375rem; }
+
+.t-scale-epsilon {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.t-scale-zeta {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.t-scale-eta {
+  font-size: 10px;
+  font-size: 0.625rem; }
+
+.t-lead {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #22D9B9;
+  margin-top: 0; }
+  .t-lead.c-theme-reverse, .c-theme-reverse .t-lead {
+    color: #000000; }
+  .t-lead.c-theme-negative, .c-theme-negative .t-lead {
+    color: #FFFFFF; }
+
+.t-number--large {
+  font-size: 60px;
+  font-size: 3.75rem;
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  margin: 0; }
+
+.t-caps {
+  text-transform: uppercase !important; }
+
+.t-centered {
+  text-align: center; }
+
+.t-left {
+  text-align: left; }
+
+.t-right {
+  text-align: right; }
+
+/* use the best ampersands from common system fonts... */
+/* =============================================================================
+//  Global list styles
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Globals
+// -------------------------------------------------------------------------- */
+li {
+  font-size: 10px;
+  font-size: 0.625rem; }
+  li strong {
+    font-weight: bold; }
+
+li {
+  margin-bottom: 0.5em; }
+
+ol, ul {
+  margin-left: 1.5em;
+  /* bump to the right a little @ mobile sizes so the numbers/bullets don't run off */
+  padding-left: 0; }
+
+/* =============================================================================
+//  Base form styles
+// ========================================================================== */
+/*doc
+---
+title: Forms
+name: Form
+category: atoms
+---
+
+*/
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* Base
+// -------------------------------------------------------------------------- */
+.form,
+form {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-style: "normal"; }
+
+.form-field, .form-textarea,
+textarea,
+input, textarea, select {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-style: "normal";
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: none;
+  text-shadow: none; }
+  .form-field:focus, .form-textarea:focus,
+  textarea:focus,
+  input:focus, textarea:focus, select:focus {
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    box-shadow: none; }
+
+.form-checkbox,
+[type="checkbox"] {
+  width: 1em;
+  height: 1em; }
+
+.form-textarea,
+textarea {
+  resize: vertical; }
+
+/* /////////////////////////////////////////////////////////////////////////////
+// Layout
+// -> classes to create generic layouts
+///////////////////////////////////////////////////////////////////////////// */
+/* ==========================================================================
+// Gallery module
+// -> arrange child elements into even rows and columns
+// ========================================================================== */
+/*doc
+---
+title: Gallery
+name: gallery
+category: organisms
+---
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+.gallery {
+  display: block;
+  position: relative;
+  font-size: 0;
+  list-style: none; }
+  .flexbox.no-ie .gallery {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
+  .gallery > ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none; }
+  @media (min-width: 30.01em) {
+    .gallery {
+      margin-left: -8px;
+      margin-right: -8px; }
+      .flexbox.no-ie .gallery {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media (min-width: 30.01em) {
+    .gallery.gallery-flush {
+      margin-left: 0;
+      margin-right: 0; } }
+  .flexbox.no-ie .gallery.gallery-flush {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+/* --- Gallery Items -------------------------------------------------------- */
+.gallery-item, .gallery-small#instagram a {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  vertical-align: top; }
+  @media (min-width: 30.01em) {
+    .gallery-item, .gallery-small#instagram a {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      padding: 16px; }
+      .flexbox.no-ie .gallery-item, .flexbox.no-ie .gallery-small#instagram a, .gallery-small#instagram .flexbox.no-ie a {
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -moz-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media (min-width: 42.01em) {
+    .gallery-item, .gallery-small#instagram a {
+      display: inline-block;
+      width: 33.33333%;
+      vertical-align: top; }
+      .flexbox.no-ie .gallery-item, .flexbox.no-ie .gallery-small#instagram a, .gallery-small#instagram .flexbox.no-ie a {
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -moz-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+.gallery-small#instagram {
+  padding-top: 16px;
+  padding-top: 1rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem; }
+  .gallery-small#instagram a {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 0 !important; }
+    .flexbox.no-ie .gallery-small#instagram a {
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -moz-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    @media (min-width: 42.01em) {
+      .gallery-small#instagram a {
+        display: inline-block;
+        width: 33.33333%;
+        vertical-align: top; }
+        .flexbox.no-ie .gallery-small#instagram a {
+          -webkit-box-flex: 0;
+          -moz-box-flex: 0;
+          box-flex: 0;
+          -webkit-flex: 0 0 auto;
+          -moz-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex; } }
+    @media (min-width: 62.01em) {
+      .gallery-small#instagram a {
+        display: inline-block;
+        width: 16.66667%;
+        vertical-align: top; }
+        .flexbox.no-ie .gallery-small#instagram a {
+          -webkit-box-flex: 0;
+          -moz-box-flex: 0;
+          box-flex: 0;
+          -webkit-flex: 0 0 auto;
+          -moz-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex; } }
+
+@media (min-width: 42.01em) {
+  .gallery-even--small .gallery-item, .gallery-even--small .gallery-small#instagram a, .gallery-small#instagram .gallery-even--small a {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top; }
+    .flexbox.no-ie .gallery-even--small .gallery-item, .flexbox.no-ie .gallery-even--small .gallery-small#instagram a, .gallery-small#instagram .flexbox.no-ie .gallery-even--small a {
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -moz-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+@media (min-width: 62.01em) {
+  .gallery-even--small .gallery-item, .gallery-even--small .gallery-small#instagram a, .gallery-small#instagram .gallery-even--small a {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top; }
+    .flexbox.no-ie .gallery-even--small .gallery-item, .flexbox.no-ie .gallery-even--small .gallery-small#instagram a, .gallery-small#instagram .flexbox.no-ie .gallery-even--small a {
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -moz-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+
+@media (min-width: 42.01em) {
+  .gallery-even .gallery-item, .gallery-even .gallery-small#instagram a, .gallery-small#instagram .gallery-even a {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top; }
+    .flexbox.no-ie .gallery-even .gallery-item, .flexbox.no-ie .gallery-even .gallery-small#instagram a, .gallery-small#instagram .flexbox.no-ie .gallery-even a {
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -moz-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.gallery--fluid-columns {
+  column-count: 2;
+  column-gap: 8px; }
+  @media (min-width: 42.01em) {
+    .gallery--fluid-columns {
+      column-count: 3; } }
+  @media (min-width: 62.01em) {
+    .gallery--fluid-columns {
+      column-count: 4; } }
+  .gallery--fluid-columns .bullet {
+    display: block;
+    color: #000 !important;
+    font-size: 10px;
+    font-size: 0.625rem;
+    padding-left: 1em;
+    text-indent: -1em; }
+    .gallery--fluid-columns .bullet.c-theme-reverse, .c-theme-reverse .gallery--fluid-columns .bullet {
+      color: #0B7F6D !important; }
+    .gallery--fluid-columns .bullet.c-theme-negative, .c-theme-negative .gallery--fluid-columns .bullet {
+      color: #22D9B9 !important; }
+    .gallery--fluid-columns .bullet:before {
+      content: "—";
+      padding-right: 5px; }
+
+/* --- Special behaviors ---------------------------------------------------- */
+.gallery--centered, .gallery-small#instagram {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center; }
+
+/* =============================================================================
+// Grid layout classes
+// ===========================================================================*/
+/*doc
+---
+title: Grids
+name: grids
+category: Layout
+---
+
+Grids
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Gutters
+// -------------------------------------------------------------------------- */
+/* Grid columns
+// -------------------------------------------------------------------------- */
+/* Utilities
+// -------------------------------------------------------------------------- */
+.l-cols-1-1 {
+  display: block;
+  font-size: 0; }
+  .l-cols-1-1 > .l-col-1 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-1 > .l-col-1 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 50%;
+        padding: 0 8px; }
+        .l-cols-1-1 > .l-col-1:first-child {
+          padding-left: 0; }
+        .l-cols-1-1 > .l-col-1:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-1 > .l-col-1 {
+          display: block; } }
+  .l-cols-1-1 > .l-col-2 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-1 > .l-col-2 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 50%;
+        padding: 0 8px; }
+        .l-cols-1-1 > .l-col-2:first-child {
+          padding-left: 0; }
+        .l-cols-1-1 > .l-col-2:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-1 > .l-col-2 {
+          display: block;
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          -webkit-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: auto;
+          max-width: 100%;
+          -webkit-box-lines: multiple;
+          -moz-box-lines: multiple;
+          box-lines: multiple;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.l-cols-1-2 {
+  display: block;
+  font-size: 0; }
+  .l-cols-1-2 > .l-col-1 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-2 > .l-col-1 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 38.1971%;
+        padding: 0 8px; }
+        .l-cols-1-2 > .l-col-1:first-child {
+          padding-left: 0; }
+        .l-cols-1-2 > .l-col-1:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-2 > .l-col-1 {
+          display: block; } }
+  .l-cols-1-2 > .l-col-2 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-2 > .l-col-2 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 61.8029%;
+        padding: 0 8px; }
+        .l-cols-1-2 > .l-col-2:first-child {
+          padding-left: 0; }
+        .l-cols-1-2 > .l-col-2:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-2 > .l-col-2 {
+          display: block;
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          -webkit-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: auto;
+          max-width: 100%;
+          -webkit-box-lines: multiple;
+          -moz-box-lines: multiple;
+          box-lines: multiple;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.l-cols-1-3 {
+  display: block;
+  font-size: 0; }
+  .l-cols-1-3 > .l-col-1 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-3 > .l-col-1 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 27.63958%;
+        padding: 0 8px; }
+        .l-cols-1-3 > .l-col-1:first-child {
+          padding-left: 0; }
+        .l-cols-1-3 > .l-col-1:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-3 > .l-col-1 {
+          display: block; } }
+  .l-cols-1-3 > .l-col-2 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-3 > .l-col-2 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 72.36042%;
+        padding: 0 8px; }
+        .l-cols-1-3 > .l-col-2:first-child {
+          padding-left: 0; }
+        .l-cols-1-3 > .l-col-2:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-3 > .l-col-2 {
+          display: block;
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          -webkit-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: auto;
+          max-width: 100%;
+          -webkit-box-lines: multiple;
+          -moz-box-lines: multiple;
+          box-lines: multiple;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.l-cols-1-4 {
+  display: block;
+  font-size: 0; }
+  .l-cols-1-4 > .l-col-1 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-4 > .l-col-1 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 19.09855%;
+        padding: 0 8px; }
+        .l-cols-1-4 > .l-col-1:first-child {
+          padding-left: 0; }
+        .l-cols-1-4 > .l-col-1:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-4 > .l-col-1 {
+          display: block; } }
+  .l-cols-1-4 > .l-col-2 {
+    font-size: 16px;
+    font-size: 1rem;
+    display: block;
+    vertical-align: top; }
+    @media (min-width: 62.01em) {
+      .l-cols-1-4 > .l-col-2 {
+        font-size: 16px;
+        font-size: 1rem;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        width: 80.90145%;
+        padding: 0 8px; }
+        .l-cols-1-4 > .l-col-2:first-child {
+          padding-left: 0; }
+        .l-cols-1-4 > .l-col-2:last-child {
+          padding-right: 0; }
+        .flexbox.no-ie .l-cols-1-4 > .l-col-2 {
+          display: block;
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          -webkit-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: auto;
+          max-width: 100%;
+          -webkit-box-lines: multiple;
+          -moz-box-lines: multiple;
+          box-lines: multiple;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.l-cols--vertically_centered > [class^="l-col-"] {
+  vertical-align: middle; }
+.flexbox .l-cols--vertically_centered {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.l-cols--centered > [class^="l-col-"] {
+  text-align: center; }
+.flexbox .l-cols--centered {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.l-col--limited {
+  max-width: 200px;
+  max-width: 12.5rem; }
+
+/* =============================================================================
+// Wrapper layout
+// ========================================================================== */
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.l-wrapper {
+  max-width: 637px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 37px;
+  padding-right: 37px; }
+  .l-wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.l-wrapper--wide {
+  max-width: 1061px; }
+
+.l-wrapper-outcrop, .slug {
+  margin-left: -2em;
+  margin-right: -2em; }
+
+.l-wrapper-outcrop\@medium {
+  margin-left: 0;
+  margin-right: 0; }
+  @media (min-width: 62.01em) {
+    .l-wrapper-outcrop\@medium {
+      margin-left: -2em;
+      margin-right: -2em; } }
+
+.l-wrapper-outcrop\@large {
+  margin-left: 0;
+  margin-right: 0; }
+  @media (min-width: 75.01em) {
+    .l-wrapper-outcrop\@large {
+      margin-left: -2em;
+      margin-right: -2em; } }
+
+/* /////////////////////////////////////////////////////////////////////////////
+// Utilities
+// -> simple helper classes that apply standard styles, as defined in config
+///////////////////////////////////////////////////////////////////////////// */
+/* =============================================================================
+// Breakpoint utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+@media (max-width: 29.99em) {
+  .show\@xsmall {
+    display: none !important; } }
+
+@media (min-width: 30.01em) {
+  .hide\@xsmall {
+    display: none !important; } }
+
+@media (max-width: 41.99em) {
+  .show\@small {
+    display: none !important; } }
+
+@media (min-width: 42.01em) {
+  .hide\@small {
+    display: none !important; } }
+
+@media (max-width: 61.99em) {
+  .show\@medium {
+    display: none !important; } }
+
+@media (min-width: 62.01em) {
+  .hide\@medium {
+    display: none !important; } }
+
+@media (max-width: 74.99em) {
+  .show\@large {
+    display: none !important; } }
+
+@media (min-width: 75.01em) {
+  .hide\@large {
+    display: none !important; } }
+
+@media (max-width: 99.99em) {
+  .show\@huge {
+    display: none !important; } }
+
+@media (min-width: 100.01em) {
+  .hide\@huge {
+    display: none !important; } }
+
+/* =============================================================================
+// Font utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+.font-display, a.nav-item, .menu-trigger {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal"; }
+
+.font-body {
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-style: "normal"; }
+
+/* =============================================================================
+//  Cover module
+// -> a main heading for content
+// ========================================================================== */
+/*doc
+---
+title: Cover
+name: cover
+category: Molecules
+---
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+.slug {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5;
+  padding-top: 32px;
+  padding-top: 2rem;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-transform: uppercase; }
+  .slug.c-theme-reverse, .c-theme-reverse .slug {
+    border-color: #22D9B9; }
+  .slug.c-theme-negative, .c-theme-negative .slug {
+    border-color: #22D9B9; }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+/* Submodules
+// -------------------------------------------------------------------------- */
+/* =============================================================================
+// Color theme utilities
+// ========================================================================== */
+body, .c-theme-default {
+  color: #000;
+  background-color: #fff;
+  border-color: #DEDEE5 !important; }
+  body ::selection, .c-theme-default ::selection {
+    background: #22D9B9;
+    color: #fff;
+    text-shadow: none; }
+  body ::-moz-selection, .c-theme-default ::-moz-selection {
+    background: #22D9B9;
+    color: #fff;
+    text-shadow: none; }
+
+.c-theme-reverse {
+  color: #0B7F6D;
+  background-color: #0FAD95;
+  border-color: #22D9B9 !important; }
+  .c-theme-reverse ::selection {
+    background: #0B7F6D;
+    color: #fff;
+    text-shadow: none; }
+  .c-theme-reverse ::-moz-selection {
+    background: #0B7F6D;
+    color: #fff;
+    text-shadow: none; }
+
+.c-theme-negative {
+  color: #22D9B9;
+  background-color: #000000;
+  border-color: #22D9B9 !important; }
+  .c-theme-negative ::selection {
+    background: #FF0074;
+    color: #fff;
+    text-shadow: none; }
+  .c-theme-negative ::-moz-selection {
+    background: #FF0074;
+    color: #fff;
+    text-shadow: none; }
+
+/* Helper classes
+// -> use on individual elements to apply special color treatment
+// -------------------------------------------------------------------------- */
+.c-text-primary {
+  color: #000 !important; }
+  .c-text-primary.c-theme-reverse, .c-theme-reverse .c-text-primary {
+    color: #0B7F6D !important; }
+  .c-text-primary.c-theme-negative, .c-theme-negative .c-text-primary {
+    color: #22D9B9 !important; }
+
+.c-text-secondary {
+  color: #22D9B9 !important; }
+  .c-text-secondary.c-theme-reverse, .c-theme-reverse .c-text-secondary {
+    color: #000000 !important; }
+  .c-text-secondary.c-theme-negative, .c-theme-negative .c-text-secondary {
+    color: #FFFFFF !important; }
+
+.c-text-tertiary {
+  color: #FF0074 !important; }
+  .c-text-tertiary.c-theme-reverse, .c-theme-reverse .c-text-tertiary {
+    color: #FFFFFF !important; }
+  .c-text-tertiary.c-theme-negative, .c-theme-negative .c-text-tertiary {
+    color: #FF0074 !important; }
+
+.c-highlight {
+  color: #22D9B9 !important; }
+  .c-highlight.c-theme-reverse, .c-theme-reverse .c-highlight {
+    color: #0B7F6D !important; }
+  .c-highlight.c-theme-negative, .c-theme-negative .c-highlight {
+    color: #FF0074 !important; }
+
+.c-highlight-bg {
+  background-color: #22D9B9; }
+  .c-highlight-bg.c-theme-reverse, .c-theme-reverse .c-highlight-bg {
+    background-color: #0B7F6D; }
+  .c-highlight-bg.c-theme-negative, .c-theme-negative .c-highlight-bg {
+    background-color: #FF0074; }
+
+.c-accent {
+  color:  !important; }
+  .c-accent.c-theme-reverse, .c-theme-reverse .c-accent {
+    color:  !important; }
+  .c-accent.c-theme-negative, .c-theme-negative .c-accent {
+    color:  !important; }
+
+.c-well {
+  background-color: #f1f1f2; }
+  .c-well.c-theme-reverse, .c-theme-reverse .c-well {
+    background-color: #22D9B9; }
+  .c-well.c-theme-negative, .c-theme-negative .c-well {
+    background-color: #0B7F6D; }
+
+.c-bg {
+  color: #fff; }
+  .c-bg.c-theme-reverse, .c-theme-reverse .c-bg {
+    color: #0FAD95; }
+  .c-bg.c-theme-negative, .c-theme-negative .c-bg {
+    color: #000000; }
+
+@media print {
+  [class^="c-"] {
+    background-color: transparent !important; } }
+/* =============================================================================
+// Border utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+.border {
+  border: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .border.c-theme-reverse, .c-theme-reverse .border {
+    border-color: #22D9B9; }
+  .border.c-theme-negative, .c-theme-negative .border {
+    border-color: #22D9B9; }
+
+.border-top {
+  border-top: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .border-top.c-theme-reverse, .c-theme-reverse .border-top {
+    border-color: #22D9B9; }
+  .border-top.c-theme-negative, .c-theme-negative .border-top {
+    border-color: #22D9B9; }
+
+.no-border-top {
+  border-top: none !important; }
+
+.border-right {
+  border-right: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .border-right.c-theme-reverse, .c-theme-reverse .border-right {
+    border-color: #22D9B9; }
+  .border-right.c-theme-negative, .c-theme-negative .border-right {
+    border-color: #22D9B9; }
+
+.no-border-right {
+  border-right: none !important; }
+
+.border-bottom {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .border-bottom.c-theme-reverse, .c-theme-reverse .border-bottom {
+    border-color: #22D9B9; }
+  .border-bottom.c-theme-negative, .c-theme-negative .border-bottom {
+    border-color: #22D9B9; }
+
+.no-border-bottom {
+  border-bottom: none !important; }
+
+.border-left {
+  border-left: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .border-left.c-theme-reverse, .c-theme-reverse .border-left {
+    border-color: #22D9B9; }
+  .border-left.c-theme-negative, .c-theme-negative .border-left {
+    border-color: #22D9B9; }
+
+.no-border-left {
+  border-left: none !important; }
+
+.no-border {
+  border: none !important; }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+.border--thick {
+  border-width: 4px; }
+
+/* =============================================================================
+// Positioning utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.l-z-top {
+  z-index: 2 !important; }
+
+.l-display-inline {
+  display: inline; }
+
+.l-display-inline_block {
+  display: inline-block; }
+
+.l-display-block {
+  display: block; }
+
+.l-centered {
+  text-align: center; }
+  @supports (transform: translateX) {
+    .l-centered {
+      left: 50%;
+      transform: translateX(-50%); } }
+
+.l-centered-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* =============================================================================
+// Spacing utilities
+// -> set up standard gutters we can use everywhere and control from here
+// ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* gutters
+// -------------------------------------------------------------------------- */
+.l-gutter {
+  padding: 8px;
+  padding: 0.5rem; }
+  .l-gutter > .l-gutter--full_bleed {
+    margin: -8px;
+    margin: -0.5rem;
+    padding: 16px;
+    padding: 1rem; }
+
+.l-gutter-wrapper {
+  padding: 8px;
+  padding: 0.5rem; }
+  .l-gutter-wrapper > .l-gutter--full_bleed {
+    margin: -8px;
+    margin: -0.5rem;
+    padding: 16px;
+    padding: 1rem; }
+
+.l-gutter--narrow {
+  padding: 2px;
+  padding: 0.125rem; }
+  .l-gutter--narrow > .l-gutter--full_bleed {
+    margin: -2px;
+    margin: -0.125rem;
+    padding: 4px;
+    padding: 0.25rem; }
+  .l-gutter--narrow .l-gutter {
+    padding: 2px;
+    padding: 0.125rem; }
+    .l-gutter--narrow .l-gutter > .l-gutter--full_bleed {
+      margin: -2px;
+      margin: -0.125rem;
+      padding: 4px;
+      padding: 0.25rem; }
+
+.l-gutter--narrow-x {
+  padding-left: 2px;
+  padding-left: 0.125rem;
+  padding-right: 2px;
+  padding-right: 0.125rem; }
+  .l-gutter--narrow-x > .l-gutter--full_bleed {
+    margin-left: -2px;
+    margin-left: -0.125rem;
+    padding-left: 4px;
+    padding-left: 0.25rem;
+    margin-right: -2px;
+    margin-right: -0.125rem;
+    padding-right: 4px;
+    padding-right: 0.25rem; }
+  .l-gutter--narrow-x .l-gutter {
+    padding-left: 2px;
+    padding-left: 0.125rem;
+    padding-right: 2px;
+    padding-right: 0.125rem; }
+    .l-gutter--narrow-x .l-gutter > .l-gutter--full_bleed {
+      margin-left: -2px;
+      margin-left: -0.125rem;
+      padding-left: 4px;
+      padding-left: 0.25rem;
+      margin-right: -2px;
+      margin-right: -0.125rem;
+      padding-right: 4px;
+      padding-right: 0.25rem; }
+
+.l-gutter--narrow-y {
+  padding-top: 2px;
+  padding-top: 0.125rem;
+  padding-bottom: 2px;
+  padding-bottom: 0.125rem; }
+  .l-gutter--narrow-y > .l-gutter--full_bleed {
+    margin-top: -2px;
+    margin-top: -0.125rem;
+    padding-top: 4px;
+    padding-top: 0.25rem;
+    margin-bottom: -2px;
+    margin-bottom: -0.125rem;
+    padding-bottom: 4px;
+    padding-bottom: 0.25rem; }
+  .l-gutter--narrow-y .l-gutter {
+    padding-top: 2px;
+    padding-top: 0.125rem;
+    padding-bottom: 2px;
+    padding-bottom: 0.125rem; }
+    .l-gutter--narrow-y .l-gutter > .l-gutter--full_bleed {
+      margin-top: -2px;
+      margin-top: -0.125rem;
+      padding-top: 4px;
+      padding-top: 0.25rem;
+      margin-bottom: -2px;
+      margin-bottom: -0.125rem;
+      padding-bottom: 4px;
+      padding-bottom: 0.25rem; }
+
+.l-gutter--default {
+  padding: 8px;
+  padding: 0.5rem; }
+  .l-gutter--default > .l-gutter--full_bleed {
+    margin: -8px;
+    margin: -0.5rem;
+    padding: 16px;
+    padding: 1rem; }
+  .l-gutter--default .l-gutter {
+    padding: 8px;
+    padding: 0.5rem; }
+    .l-gutter--default .l-gutter > .l-gutter--full_bleed {
+      margin: -8px;
+      margin: -0.5rem;
+      padding: 16px;
+      padding: 1rem; }
+
+.l-gutter--default-x {
+  padding-left: 8px;
+  padding-left: 0.5rem;
+  padding-right: 8px;
+  padding-right: 0.5rem; }
+  .l-gutter--default-x > .l-gutter--full_bleed {
+    margin-left: -8px;
+    margin-left: -0.5rem;
+    padding-left: 16px;
+    padding-left: 1rem;
+    margin-right: -8px;
+    margin-right: -0.5rem;
+    padding-right: 16px;
+    padding-right: 1rem; }
+  .l-gutter--default-x .l-gutter {
+    padding-left: 8px;
+    padding-left: 0.5rem;
+    padding-right: 8px;
+    padding-right: 0.5rem; }
+    .l-gutter--default-x .l-gutter > .l-gutter--full_bleed {
+      margin-left: -8px;
+      margin-left: -0.5rem;
+      padding-left: 16px;
+      padding-left: 1rem;
+      margin-right: -8px;
+      margin-right: -0.5rem;
+      padding-right: 16px;
+      padding-right: 1rem; }
+
+.l-gutter--default-y {
+  padding-top: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem; }
+  .l-gutter--default-y > .l-gutter--full_bleed {
+    margin-top: -8px;
+    margin-top: -0.5rem;
+    padding-top: 16px;
+    padding-top: 1rem;
+    margin-bottom: -8px;
+    margin-bottom: -0.5rem;
+    padding-bottom: 16px;
+    padding-bottom: 1rem; }
+  .l-gutter--default-y .l-gutter {
+    padding-top: 8px;
+    padding-top: 0.5rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem; }
+    .l-gutter--default-y .l-gutter > .l-gutter--full_bleed {
+      margin-top: -8px;
+      margin-top: -0.5rem;
+      padding-top: 16px;
+      padding-top: 1rem;
+      margin-bottom: -8px;
+      margin-bottom: -0.5rem;
+      padding-bottom: 16px;
+      padding-bottom: 1rem; }
+
+.l-gutter--wide {
+  padding: 29px;
+  padding: 1.8125rem; }
+  .l-gutter--wide > .l-gutter--full_bleed {
+    margin: -29px;
+    margin: -1.8125rem;
+    padding: 58px;
+    padding: 3.625rem; }
+  .l-gutter--wide .l-gutter {
+    padding: 29px;
+    padding: 1.8125rem; }
+    .l-gutter--wide .l-gutter > .l-gutter--full_bleed {
+      margin: -29px;
+      margin: -1.8125rem;
+      padding: 58px;
+      padding: 3.625rem; }
+
+.l-gutter--wide-x {
+  padding-left: 29px;
+  padding-left: 1.8125rem;
+  padding-right: 29px;
+  padding-right: 1.8125rem; }
+  .l-gutter--wide-x > .l-gutter--full_bleed {
+    margin-left: -29px;
+    margin-left: -1.8125rem;
+    padding-left: 58px;
+    padding-left: 3.625rem;
+    margin-right: -29px;
+    margin-right: -1.8125rem;
+    padding-right: 58px;
+    padding-right: 3.625rem; }
+  .l-gutter--wide-x .l-gutter {
+    padding-left: 29px;
+    padding-left: 1.8125rem;
+    padding-right: 29px;
+    padding-right: 1.8125rem; }
+    .l-gutter--wide-x .l-gutter > .l-gutter--full_bleed {
+      margin-left: -29px;
+      margin-left: -1.8125rem;
+      padding-left: 58px;
+      padding-left: 3.625rem;
+      margin-right: -29px;
+      margin-right: -1.8125rem;
+      padding-right: 58px;
+      padding-right: 3.625rem; }
+
+.l-gutter--wide-y {
+  padding-top: 29px;
+  padding-top: 1.8125rem;
+  padding-bottom: 29px;
+  padding-bottom: 1.8125rem; }
+  .l-gutter--wide-y > .l-gutter--full_bleed {
+    margin-top: -29px;
+    margin-top: -1.8125rem;
+    padding-top: 58px;
+    padding-top: 3.625rem;
+    margin-bottom: -29px;
+    margin-bottom: -1.8125rem;
+    padding-bottom: 58px;
+    padding-bottom: 3.625rem; }
+  .l-gutter--wide-y .l-gutter {
+    padding-top: 29px;
+    padding-top: 1.8125rem;
+    padding-bottom: 29px;
+    padding-bottom: 1.8125rem; }
+    .l-gutter--wide-y .l-gutter > .l-gutter--full_bleed {
+      margin-top: -29px;
+      margin-top: -1.8125rem;
+      padding-top: 58px;
+      padding-top: 3.625rem;
+      margin-bottom: -29px;
+      margin-bottom: -1.8125rem;
+      padding-bottom: 58px;
+      padding-bottom: 3.625rem; }
+
+.l-gutter--xwide {
+  padding: 52px;
+  padding: 3.25rem; }
+  .l-gutter--xwide > .l-gutter--full_bleed {
+    margin: -52px;
+    margin: -3.25rem;
+    padding: 104px;
+    padding: 6.5rem; }
+  .l-gutter--xwide .l-gutter {
+    padding: 52px;
+    padding: 3.25rem; }
+    .l-gutter--xwide .l-gutter > .l-gutter--full_bleed {
+      margin: -52px;
+      margin: -3.25rem;
+      padding: 104px;
+      padding: 6.5rem; }
+
+.l-gutter--xwide-x {
+  padding-left: 52px;
+  padding-left: 3.25rem;
+  padding-right: 52px;
+  padding-right: 3.25rem; }
+  .l-gutter--xwide-x > .l-gutter--full_bleed {
+    margin-left: -52px;
+    margin-left: -3.25rem;
+    padding-left: 104px;
+    padding-left: 6.5rem;
+    margin-right: -52px;
+    margin-right: -3.25rem;
+    padding-right: 104px;
+    padding-right: 6.5rem; }
+  .l-gutter--xwide-x .l-gutter {
+    padding-left: 52px;
+    padding-left: 3.25rem;
+    padding-right: 52px;
+    padding-right: 3.25rem; }
+    .l-gutter--xwide-x .l-gutter > .l-gutter--full_bleed {
+      margin-left: -52px;
+      margin-left: -3.25rem;
+      padding-left: 104px;
+      padding-left: 6.5rem;
+      margin-right: -52px;
+      margin-right: -3.25rem;
+      padding-right: 104px;
+      padding-right: 6.5rem; }
+
+.l-gutter--xwide-y {
+  padding-top: 52px;
+  padding-top: 3.25rem;
+  padding-bottom: 52px;
+  padding-bottom: 3.25rem; }
+  .l-gutter--xwide-y > .l-gutter--full_bleed {
+    margin-top: -52px;
+    margin-top: -3.25rem;
+    padding-top: 104px;
+    padding-top: 6.5rem;
+    margin-bottom: -52px;
+    margin-bottom: -3.25rem;
+    padding-bottom: 104px;
+    padding-bottom: 6.5rem; }
+  .l-gutter--xwide-y .l-gutter {
+    padding-top: 52px;
+    padding-top: 3.25rem;
+    padding-bottom: 52px;
+    padding-bottom: 3.25rem; }
+    .l-gutter--xwide-y .l-gutter > .l-gutter--full_bleed {
+      margin-top: -52px;
+      margin-top: -3.25rem;
+      padding-top: 104px;
+      padding-top: 6.5rem;
+      margin-bottom: -52px;
+      margin-bottom: -3.25rem;
+      padding-bottom: 104px;
+      padding-bottom: 6.5rem; }
+
+/* margins & padding
+// -------------------------------------------------------------------------- */
+.l-margin {
+  margin: 16px !important;
+  margin: 1rem !important; }
+
+.l-margin-narrow {
+  margin: 10px !important;
+  margin: 0.625rem !important; }
+
+.l-margin-wide {
+  margin: 37px !important;
+  margin: 2.3125rem !important; }
+
+.l-margin-xwide {
+  margin: 60px !important;
+  margin: 3.75rem !important; }
+
+.l-margin-top {
+  margin-top: 16px !important;
+  margin-top: 1rem !important; }
+
+.l-no-margin {
+  margin: 0 !important;
+  margin: 0 !important; }
+
+.l-margin-top-narrow {
+  margin-top: 10px !important;
+  margin-top: 0.625rem !important; }
+
+.l-no-margin-top {
+  margin-top: 0 !important;
+  margin-top: 0 !important; }
+
+.l-margin-top-wide {
+  margin-top: 37px !important;
+  margin-top: 2.3125rem !important; }
+
+.l-no-margin-top {
+  margin-top: 0 !important;
+  margin-top: 0 !important; }
+
+.l-margin-top-xwide {
+  margin-top: 60px !important;
+  margin-top: 3.75rem !important; }
+
+.l-no-margin-top {
+  margin-top: 0 !important;
+  margin-top: 0 !important; }
+
+.l-margin-right {
+  margin-right: 16px !important;
+  margin-right: 1rem !important; }
+
+.l-no-margin {
+  margin: 0 !important;
+  margin: 0 !important; }
+
+.l-margin-right-narrow {
+  margin-right: 10px !important;
+  margin-right: 0.625rem !important; }
+
+.l-no-margin-right {
+  margin-right: 0 !important;
+  margin-right: 0 !important; }
+
+.l-margin-right-wide {
+  margin-right: 37px !important;
+  margin-right: 2.3125rem !important; }
+
+.l-no-margin-right {
+  margin-right: 0 !important;
+  margin-right: 0 !important; }
+
+.l-margin-right-xwide {
+  margin-right: 60px !important;
+  margin-right: 3.75rem !important; }
+
+.l-no-margin-right {
+  margin-right: 0 !important;
+  margin-right: 0 !important; }
+
+.l-margin-bottom {
+  margin-bottom: 16px !important;
+  margin-bottom: 1rem !important; }
+
+.l-no-margin {
+  margin: 0 !important;
+  margin: 0 !important; }
+
+.l-margin-bottom-narrow {
+  margin-bottom: 10px !important;
+  margin-bottom: 0.625rem !important; }
+
+.l-no-margin-bottom {
+  margin-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+
+.l-margin-bottom-wide {
+  margin-bottom: 37px !important;
+  margin-bottom: 2.3125rem !important; }
+
+.l-no-margin-bottom {
+  margin-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+
+.l-margin-bottom-xwide {
+  margin-bottom: 60px !important;
+  margin-bottom: 3.75rem !important; }
+
+.l-no-margin-bottom {
+  margin-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+
+.l-margin-left {
+  margin-left: 16px !important;
+  margin-left: 1rem !important; }
+
+.l-no-margin {
+  margin: 0 !important;
+  margin: 0 !important; }
+
+.l-margin-left-narrow {
+  margin-left: 10px !important;
+  margin-left: 0.625rem !important; }
+
+.l-no-margin-left {
+  margin-left: 0 !important;
+  margin-left: 0 !important; }
+
+.l-margin-left-wide {
+  margin-left: 37px !important;
+  margin-left: 2.3125rem !important; }
+
+.l-no-margin-left {
+  margin-left: 0 !important;
+  margin-left: 0 !important; }
+
+.l-margin-left-xwide {
+  margin-left: 60px !important;
+  margin-left: 3.75rem !important; }
+
+.l-no-margin-left {
+  margin-left: 0 !important;
+  margin-left: 0 !important; }
+
+.l-padding {
+  padding: 16px !important;
+  padding: 1rem !important; }
+
+.l-padding-narrow {
+  padding: 10px !important;
+  padding: 0.625rem !important; }
+
+.l-padding-wide {
+  padding: 37px !important;
+  padding: 2.3125rem !important; }
+
+.l-padding-xwide {
+  padding: 60px !important;
+  padding: 3.75rem !important; }
+
+.l-padding-top {
+  padding-top: 16px !important;
+  padding-top: 1rem !important; }
+
+.l-no-padding {
+  padding: 0 !important;
+  padding: 0 !important; }
+
+.l-padding-top-narrow {
+  padding-top: 10px !important;
+  padding-top: 0.625rem !important; }
+
+.l-no-padding-top {
+  padding-top: 0 !important;
+  padding-top: 0 !important; }
+
+.l-padding-top-wide {
+  padding-top: 37px !important;
+  padding-top: 2.3125rem !important; }
+
+.l-no-padding-top {
+  padding-top: 0 !important;
+  padding-top: 0 !important; }
+
+.l-padding-top-xwide {
+  padding-top: 60px !important;
+  padding-top: 3.75rem !important; }
+
+.l-no-padding-top {
+  padding-top: 0 !important;
+  padding-top: 0 !important; }
+
+.l-padding-right {
+  padding-right: 16px !important;
+  padding-right: 1rem !important; }
+
+.l-no-padding {
+  padding: 0 !important;
+  padding: 0 !important; }
+
+.l-padding-right-narrow {
+  padding-right: 10px !important;
+  padding-right: 0.625rem !important; }
+
+.l-no-padding-right {
+  padding-right: 0 !important;
+  padding-right: 0 !important; }
+
+.l-padding-right-wide {
+  padding-right: 37px !important;
+  padding-right: 2.3125rem !important; }
+
+.l-no-padding-right {
+  padding-right: 0 !important;
+  padding-right: 0 !important; }
+
+.l-padding-right-xwide {
+  padding-right: 60px !important;
+  padding-right: 3.75rem !important; }
+
+.l-no-padding-right {
+  padding-right: 0 !important;
+  padding-right: 0 !important; }
+
+.l-padding-bottom {
+  padding-bottom: 16px !important;
+  padding-bottom: 1rem !important; }
+
+.l-no-padding {
+  padding: 0 !important;
+  padding: 0 !important; }
+
+.l-padding-bottom-narrow {
+  padding-bottom: 10px !important;
+  padding-bottom: 0.625rem !important; }
+
+.l-no-padding-bottom {
+  padding-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
+.l-padding-bottom-wide {
+  padding-bottom: 37px !important;
+  padding-bottom: 2.3125rem !important; }
+
+.l-no-padding-bottom {
+  padding-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
+.l-padding-bottom-xwide {
+  padding-bottom: 60px !important;
+  padding-bottom: 3.75rem !important; }
+
+.l-no-padding-bottom {
+  padding-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
+.l-padding-left {
+  padding-left: 16px !important;
+  padding-left: 1rem !important; }
+
+.l-no-padding {
+  padding: 0 !important;
+  padding: 0 !important; }
+
+.l-padding-left-narrow {
+  padding-left: 10px !important;
+  padding-left: 0.625rem !important; }
+
+.l-no-padding-left {
+  padding-left: 0 !important;
+  padding-left: 0 !important; }
+
+.l-padding-left-wide {
+  padding-left: 37px !important;
+  padding-left: 2.3125rem !important; }
+
+.l-no-padding-left {
+  padding-left: 0 !important;
+  padding-left: 0 !important; }
+
+.l-padding-left-xwide {
+  padding-left: 60px !important;
+  padding-left: 3.75rem !important; }
+
+.l-no-padding-left {
+  padding-left: 0 !important;
+  padding-left: 0 !important; }
+
+/* =============================================================================
+// Visibility utilities
+// ========================================================================== */
+.is-visually_hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px; }
+  .is-visually_hidden.focusable {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px; }
+    .is-visually_hidden.focusable:active, .is-visually_hidden.focusable:focus {
+      clip-path: auto;
+      height: auto;
+      overflow: visible;
+      position: static;
+      width: auto; }
+
+.is-hidden {
+  display: none !important; }
+
+/* /////////////////////////////////////////////////////////////////////////////
+// Components
+// -> reusable, composable, self-contained interface elements
+///////////////////////////////////////////////////////////////////////////// */
+/* =============================================================================
+//  Button component
+// ========================================================================== */
+/*doc
+---
+title: Button
+name: button
+category: components
+---
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+.button {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+  border:  solid ;
+  border-radius: 3px;
+  font-family: "aspira-normal", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: "normal";
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  padding: 0.36em 1em 0.4em;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  text-shadow: none; }
+  .button:hover, .button:focus {
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    box-shadow: none; }
+  .button:active {
+    -webkit-transition: all 0;
+    -moz-transition: all 0;
+    transition: all 0; }
+  .button strong {
+    font-family: "aspira-bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-weight: "bold"; }
+
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+/* --- button groups -------------------------------------------------------- */
+.button-group {
+  display: block;
+  position: relative;
+  font-size: 0;
+  list-style: none; }
+  .button-group > .button,
+  .button-group > li, .button-group > .button-group {
+    margin: 10px 0 0 0;
+    margin: 0.625rem 0 0 0;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle; }
+
+.button-group--flush > .button {
+  margin: 0;
+  border-radius: 0;
+  border-bottom-width: 0;
+  border-top-width: 1px; }
+  .button-group--flush > .button:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  .button-group--flush > .button:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+
+.button-group--horizontal {
+  display: inline-block; }
+  .button-group--horizontal > .button, .button-group--horizontal > .button-group--horizontal {
+    margin: 0 10px 0 0;
+    margin: 0 0.625rem 0 0;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle; }
+    .button-group--horizontal > .button:last-child, .button-group--horizontal > .button-group--horizontal:last-child {
+      margin-right: 0; }
+  .button-group--horizontal > li {
+    margin: 0 10px 0 0;
+    margin: 0 0.625rem 0 0;
+    display: inline-block;
+    vertical-align: middle; }
+    .button-group--horizontal > li:last-child {
+      margin-right: 0; }
+    .button-group--horizontal > li .button {
+      margin: 0; }
+  .button-group--horizontal.button-group--flush > .button {
+    margin: 0;
+    border-width: 0 1px;
+    border-radius: 0; }
+    .button-group--horizontal.button-group--flush > .button:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    .button-group--horizontal.button-group--flush > .button:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+
+@media (min-width: 30.01em) {
+  .button-group--horizontal\@xsmall {
+    display: inline-block; }
+    .button-group--horizontal\@xsmall > .button, .button-group--horizontal\@xsmall > .button-group--horizontal\@xsmall {
+      margin: 0 10px 0 0;
+      margin: 0 0.625rem 0 0;
+      display: inline-block;
+      width: auto;
+      vertical-align: middle; }
+      .button-group--horizontal\@xsmall > .button:last-child, .button-group--horizontal\@xsmall > .button-group--horizontal\@xsmall:last-child {
+        margin-right: 0; }
+    .button-group--horizontal\@xsmall > li {
+      margin: 0 10px 0 0;
+      margin: 0 0.625rem 0 0;
+      display: inline-block;
+      vertical-align: middle; }
+      .button-group--horizontal\@xsmall > li:last-child {
+        margin-right: 0; }
+      .button-group--horizontal\@xsmall > li .button {
+        margin: 0; }
+    .button-group--horizontal\@xsmall.button-group--flush > .button {
+      margin: 0;
+      border-width: 0 1px;
+      border-radius: 0; }
+      .button-group--horizontal\@xsmall.button-group--flush > .button:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; }
+      .button-group--horizontal\@xsmall.button-group--flush > .button:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; } }
+@media (min-width: 42.01em) {
+  .button-group--horizontal\@small {
+    display: inline-block; }
+    .button-group--horizontal\@small > .button, .button-group--horizontal\@small > .button-group--horizontal\@small {
+      margin: 0 10px 0 0;
+      margin: 0 0.625rem 0 0;
+      display: inline-block;
+      width: auto;
+      vertical-align: middle; }
+      .button-group--horizontal\@small > .button:last-child, .button-group--horizontal\@small > .button-group--horizontal\@small:last-child {
+        margin-right: 0; }
+    .button-group--horizontal\@small > li {
+      margin: 0 10px 0 0;
+      margin: 0 0.625rem 0 0;
+      display: inline-block;
+      vertical-align: middle; }
+      .button-group--horizontal\@small > li:last-child {
+        margin-right: 0; }
+      .button-group--horizontal\@small > li .button {
+        margin: 0; }
+    .button-group--horizontal\@small.button-group--flush > .button {
+      margin: 0;
+      border-width: 0 1px;
+      border-radius: 0; }
+      .button-group--horizontal\@small.button-group--flush > .button:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; }
+      .button-group--horizontal\@small.button-group--flush > .button:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; } }
+/* Modifiers
+// -------------------------------------------------------------------------- */
+/* --- size ----------------------------------------------------------------- */
+.button--small {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.button--large {
+  font-size: 23px;
+  font-size: 1.4375rem; }
+
+/* --- prominence ----------------------------------------------------------- */
+.button--secondary {
+  color: #22D9B9;
+  border-color: #22D9B9; }
+  .button--secondary.c-theme-reverse, .c-theme-reverse .button--secondary {
+    color: #000000; }
+  .button--secondary.c-theme-negative, .c-theme-negative .button--secondary {
+    color: #FFFFFF; }
+  .button--secondary.c-theme-reverse, .c-theme-reverse .button--secondary {
+    border-color: #000000; }
+  .button--secondary.c-theme-negative, .c-theme-negative .button--secondary {
+    border-color: #FFFFFF; }
+
+.button--tertiary {
+  color: #FF0074;
+  border-color: #FF0074; }
+  .button--tertiary.c-theme-reverse, .c-theme-reverse .button--tertiary {
+    color: #FFFFFF; }
+  .button--tertiary.c-theme-negative, .c-theme-negative .button--tertiary {
+    color: #FF0074; }
+  .button--tertiary.c-theme-reverse, .c-theme-reverse .button--tertiary {
+    border-color: #FFFFFF; }
+  .button--tertiary.c-theme-negative, .c-theme-negative .button--tertiary {
+    border-color: #FF0074; }
+
+.button--disabled {
+  cursor: initial; }
+
+/* --- special effects ------------------------------------------------------ */
+.button--text {
+  border: none !important;
+  padding: 0; }
+
+/* =============================================================================
+//  Cover module
+// -> a main heading for content
+// ========================================================================== */
+/*doc
+---
+title: Cover
+name: cover
+category: Molecules
+---
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+.cover {
+  display: block;
+  position: relative;
+  min-height: 100px;
+  min-height: 30vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+.cover-header {
+  padding-top: 80px;
+  padding-top: 5rem;
+  padding-bottom: 26px;
+  padding-bottom: 1.625rem;
+  min-height: 140px;
+  min-height: 15vh;
+  position: relative; }
+
+/* Submodules
+// -------------------------------------------------------------------------- */
+.cover-content {
+  z-index: 1; }
+
+/* =============================================================================
+// Wrapper layout
+// ========================================================================== */
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+footer, .footer {
+  border-top: 3px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  footer.c-theme-reverse, .c-theme-reverse footer, .footer.c-theme-reverse, .c-theme-reverse .footer {
+    border-color: #22D9B9; }
+  footer.c-theme-negative, .c-theme-negative footer, .footer.c-theme-negative, .c-theme-negative .footer {
+    border-color: #22D9B9; }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+.footer--nav--horizontal .footer--nav-item--center {
+  display: inline-block;
+  margin: 0 auto; }
+.footer--nav--horizontal .footer--nav-item--left {
+  display: inline-block;
+  float: left; }
+.footer--nav--horizontal .footer--nav-item--right {
+  display: inline-block;
+  float: right; }
+.footer--nav--horizontal .footer--text {
+  margin-top: 12px;
+  margin-top: 0.75rem; }
+
+@media (min-width: 30.01em) {
+  .footer--nav--horizontal\@xsmall .footer--nav-item--center {
+    display: inline-block;
+    margin: 0 auto; }
+  .footer--nav--horizontal\@xsmall .footer--nav-item--left {
+    display: inline-block;
+    float: left; }
+  .footer--nav--horizontal\@xsmall .footer--nav-item--right {
+    display: inline-block;
+    float: right; }
+  .footer--nav--horizontal\@xsmall .footer--text {
+    margin-top: 12px;
+    margin-top: 0.75rem; } }
+@media (min-width: 42.01em) {
+  .footer--nav--horizontal\@small .footer--nav-item--center {
+    display: inline-block;
+    margin: 0 auto; }
+  .footer--nav--horizontal\@small .footer--nav-item--left {
+    display: inline-block;
+    float: left; }
+  .footer--nav--horizontal\@small .footer--nav-item--right {
+    display: inline-block;
+    float: right; }
+  .footer--nav--horizontal\@small .footer--text {
+    margin-top: 12px;
+    margin-top: 0.75rem; } }
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+.footer--nav-item {
+  display: block;
+  position: relative;
+  vertical-align: middle; }
+  .footer--nav-item::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* =============================================================================
+//  Icon component
+// -> for icon sprites, vector graphics, etc.
+// ========================================================================== */
+.icon {
+  display: inline-block;
+  height: 1.4em;
+  width: 1.4em;
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: -0.15em;
+  margin-right: 0.3em;
+  vertical-align: baseline;
+  fill: inherit; }
+  .icon svg {
+    margin: 0;
+    width: 100%;
+    max-height: 100%; }
+
+.logo {
+  display: block; }
+
+.logo--small {
+  max-width: 80px;
+  max-width: 5rem; }
+
+.logo--xsmall {
+  max-width: 40px;
+  max-width: 2.5rem; }
+
+a .logo {
+  fill: blue; }
+
+.bio-profile_photo {
+  width: 120px;
+  width: 7.5rem;
+  height: 120px;
+  height: 7.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  overflow: hidden; }
+
+/* =============================================================================
+//  l-Bookend layout utility
+//  -> a narrow, horizontal 'strip' appearing at the top and bottom of a page
+//  -> used as a common layout foundation for the main header and footer
+// ========================================================================== */
+/*doc
+---
+title: l-Bookend
+name: l-bookend
+category: Layout
+---
+
+*/
+/* =============================================================================
+//  Core Sass variables, mixins, & utilities
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/*doc
+---
+title: Animation
+name: animation
+category: core
+---
+
+The animation library sets global defaults for CSS transitions. Use it in your modules like this:
+
+```
+.your-selector {
+  @include transition-default;
+}
+```
+
+*/
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ----- Aspira ------------------------------------------------------------ */
+@font-face {
+  font-family: "aspira-normal";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Aspira-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Thin-webfont.woff") format("woff"), url("../fonts/Aspira-Thin-webfont.ttf") format("truetype"), url("../fonts/Aspira-Thin-webfont.svg#aspira-normal") format("svg"); }
+@font-face {
+  font-family: "aspira-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Aspira-Demi-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Aspira-Demi-webfont.woff") format("woff"), url("../fonts/Aspira-Demi-webfont.ttf") format("truetype"), url("../fonts/Aspira-Demi-webfont.svg#aspira-bold") format("svg"); }
+/* Font mixins
+// -------------------------------------------------------------------------- */
+/* ----- Display type ------------------------------------------------------- */
+/* ----- Body type ---------------------------------------------------------- */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+.has-border {
+  border-bottom: 1px solid #DEDEE5;
+  border-color: #DEDEE5; }
+  .has-border.c-theme-reverse, .c-theme-reverse .has-border {
+    border-color: #22D9B9; }
+  .has-border.c-theme-negative, .c-theme-negative .has-border {
+    border-color: #22D9B9; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Wrappers
+
+```html_example
+<a href="#" class="button l-abs top right">Button @ top right</a>
+```
+
+*/
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* =============================================================================
+// Global spacing
+// -> used to keep whitespace in the layout consistent
+// ========================================================================== */
+/* ==========================================================================
+ * Helpers for converting units (rems, percent, etc.)
+ * ========================================================================== */
+/* Base
+// -------------------------------------------------------------------------- */
+.main-nav {
+  display: block; }
+
+/* Modifiers
+// -------------------------------------------------------------------------- */
+.main-nav--horizontal .nav-item--fixed {
+  position: fixed; }
+.main-nav--horizontal .nav-item--center {
+  display: inline-block;
+  margin: 0 auto; }
+.main-nav--horizontal .nav-item--left {
+  display: inline-block;
+  float: left; }
+.main-nav--horizontal .nav-item--right {
+  display: inline-block;
+  float: right; }
+
+@media (min-width: 30.01em) {
+  .main-nav--horizontal\@xsmall .nav-item--fixed {
+    position: fixed; }
+  .main-nav--horizontal\@xsmall .nav-item--center {
+    display: inline-block;
+    margin: 0 auto; }
+  .main-nav--horizontal\@xsmall .nav-item--left {
+    display: inline-block;
+    float: left; }
+  .main-nav--horizontal\@xsmall .nav-item--right {
+    display: inline-block;
+    float: right; } }
+@media (min-width: 42.01em) {
+  .main-nav--horizontal\@small .nav-item--fixed {
+    position: fixed; }
+  .main-nav--horizontal\@small .nav-item--center {
+    display: inline-block;
+    margin: 0 auto; }
+  .main-nav--horizontal\@small .nav-item--left {
+    display: inline-block;
+    float: left; }
+  .main-nav--horizontal\@small .nav-item--right {
+    display: inline-block;
+    float: right; } }
+/* Subcomponents
+// -------------------------------------------------------------------------- */
+a.nav-item, .menu-trigger {
+  color: #000;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  padding-top: 50px;
+  padding-top: 3.125rem;
+  padding-right: 16px;
+  padding-right: 1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  vertical-align: middle; }
+  a.nav-item.c-theme-reverse, .c-theme-reverse.menu-trigger, .c-theme-reverse a.nav-item, .c-theme-reverse .menu-trigger {
+    color: #0B7F6D; }
+  a.nav-item.c-theme-negative, .c-theme-negative.menu-trigger, .c-theme-negative a.nav-item, .c-theme-negative .menu-trigger {
+    color: #22D9B9; }
+  a.nav-item:hover, .menu-trigger:hover {
+    color: #22D9B9; }
+    a.nav-item:hover.c-theme-reverse, .menu-trigger:hover.c-theme-reverse, .c-theme-reverse a.nav-item:hover, .c-theme-reverse .menu-trigger:hover {
+      color: #0B7F6D; }
+    a.nav-item:hover.c-theme-negative, .menu-trigger:hover.c-theme-negative, .c-theme-negative a.nav-item:hover, .c-theme-negative .menu-trigger:hover {
+      color: #FF0074; }
+
+.menu-trigger {
+  display: none; }
+  .menu-trigger span, .menu-trigger span:before, .menu-trigger span:after {
+    background-color: #000;
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 16px; }
+    .menu-trigger span.c-theme-reverse, .c-theme-reverse .menu-trigger span, .menu-trigger span:before.c-theme-reverse, .c-theme-reverse .menu-trigger span:before, .menu-trigger span:after.c-theme-reverse, .c-theme-reverse .menu-trigger span:after {
+      background-color: #0B7F6D; }
+    .menu-trigger span.c-theme-negative, .c-theme-negative .menu-trigger span, .menu-trigger span:before.c-theme-negative, .c-theme-negative .menu-trigger span:before, .menu-trigger span:after.c-theme-negative, .c-theme-negative .menu-trigger span:after {
+      background-color: #22D9B9; }
+  .menu-trigger span {
+    top: 58px;
+    top: 3.625rem;
+    right: -8px;
+    right: -0.5rem;
+    position: absolute; }
+  .menu-trigger span:before {
+    margin-top: -4px; }
+  .menu-trigger span:after {
+    margin-top: 6px; }
